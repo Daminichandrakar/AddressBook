@@ -9,6 +9,7 @@ public class AddressBookService implements IAddressBook {
 
 	ArrayList<AddressBookModel> addressBookModels = new ArrayList<>();
 	Scanner scanner = new Scanner(System.in);
+
 	@Override
 	public void addPerson() {
 		System.out.println("Enter Your First Name");
@@ -32,6 +33,14 @@ public class AddressBookService implements IAddressBook {
 				zip);
 		addressBookModels.add(addressBookModel);
 		System.out.println("Person Added Successfully" + addressBookModels);
+
+	}
+
+	@Override
+	public void printAddressBook() {
+		for (AddressBookModel aBookModel : addressBookModels) {
+			System.out.println(aBookModel);
+		}
 
 	}
 

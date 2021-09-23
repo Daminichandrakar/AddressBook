@@ -94,4 +94,16 @@ public class AddressBookService implements IAddressBook {
 		}
 
 	}
+
+	@Override
+	public void deletePerson() {
+		System.out.println("enter person first name you want to edit");
+		String firstName = scanner.next();
+		for (AddressBookModel aBookModel : addressBookModels) {
+			if (aBookModel.getFirstName().equals(firstName)) {
+				addressBookModels.remove(aBookModel);
+			}
+		}
+
+	}
 }
